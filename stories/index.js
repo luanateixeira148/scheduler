@@ -12,6 +12,7 @@ import InterviewerListItem from "components/InterviewerListItem";
 import InterviewerList from "components/InterviewerList";
 
 import Appointment from "components/Appointment";
+import Header from "components/Appointment/Header";
 
 /***********/
 
@@ -151,3 +152,5 @@ storiesOf("Appointment", module)
       time="12pm"
     />
   )
+  .add("Header", () => <Header time="12pm" />)
+
