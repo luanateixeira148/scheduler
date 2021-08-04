@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames/bind";
 
 import "components/InterviewerListItem.scss";
 
 const InterviewerListItem = function (props) {
+  
   // checks if the interviewer is selected and show/hide the name
   const formatInterviewer = function () {
     if (props.selected) {
@@ -22,7 +23,7 @@ const InterviewerListItem = function (props) {
   return (
     <li
       className={interviewerClass}
-      onClick={() => props.setInterviewer(props.name)}
+      onClick={() => props.setInterviewer(props.id)}
     >
       <img
         className="interviewers__item-image"
