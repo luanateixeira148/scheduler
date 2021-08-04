@@ -4,16 +4,6 @@ import classNames from "classnames/bind";
 import "components/InterviewerListItem.scss";
 
 const InterviewerListItem = function (props) {
-  
-  // checks if the interviewer is selected and show/hide the name
-  const formatInterviewer = function () {
-    if (props.selected) {
-      return props.name;
-    }
-    if (!props.selected) {
-      return null;
-    }
-  };
 
   const interviewerClass = classNames("interviewers__item", {
     "interviewers__item--selected": props.selected,
@@ -23,14 +13,14 @@ const InterviewerListItem = function (props) {
   return (
     <li
       className={interviewerClass}
-      onClick={() => props.setInterviewer(props.id)}
+      onClick={props.setInterviewer}
     >
       <img
         className="interviewers__item-image"
         src={props.avatar}
-        alt="Sylvia Palmer"
+        alt={props.name}
       />
-      {formatInterviewer()}
+      {props.selected && props.name}
     </li>
   );
 };
