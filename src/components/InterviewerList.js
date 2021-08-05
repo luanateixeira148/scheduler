@@ -7,7 +7,7 @@ const InterviewerList = function (props) {
 
   // maps the new interviewers array with the info from the db
   const interviewers = props.interviewers.map((interviewer) => {
-    console.log('props.setInterviewer', props.setInterviewer)
+    // console.log('props.setInterviewer', props.setInterviewer)
     return (
       <InterviewerListItem
         id={interviewer.id}
