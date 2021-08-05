@@ -192,6 +192,7 @@ storiesOf("Appointment", module)
     />)
   .add("Form Creation", () => 
     <Form 
+      onSubmit={event => event.preventDefault()}
       interviewers={interviewers}
       onSave={action("onSave")}
       onCancel={action("onCancel")}
