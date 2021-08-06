@@ -1,5 +1,5 @@
 export function getAppointmentsForDay(state, day) {
-  let output = [];
+  const output = [];
   // find the object in our state.days array who's name matches the provided day.
 
   const dayArr = state.days.filter((x) => x.name === day);
@@ -18,4 +18,19 @@ export function getAppointmentsForDay(state, day) {
   }
 
   return output;
-}
+};
+
+// The function should return a new object containing the interview data when we pass it an object that contains the interviewer. Otherwise, the function should return null.
+export function getInterview(state, interview) {
+  const output = {};
+
+  if (!interview) {
+    return null;
+  }
+
+  output['student'] = interview.student;
+  output['interviewer'] = state.interviewers[interview.interviewer];
+
+  return output;
+  
+};
