@@ -62,18 +62,6 @@ const appointments = [
     time: "4pm",
   },
   {
-    id: 6,
-    time: "5pm",
-    interview: {
-      student: "Barney Stinson",
-      interviewer: {
-        id: 1,
-        name: "Ted Mosby",
-        avatar: "https://i.imgur.com/LpaY82x.png",
-      }
-    }
-  },
-  {
     id: 7,
     time: "6pm",
   },
