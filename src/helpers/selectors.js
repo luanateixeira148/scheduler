@@ -34,3 +34,26 @@ export function getInterview(state, interview) {
   return output;
   
 };
+
+// provide the list of interviewers to the Form component
+export function getInterviewersForDay(state, day) {
+  const output = [];
+
+  // find the object in our state.days array who's name matches the provided day.
+  const dayArr = state.days.filter((x) => x.name === day);
+
+  if (dayArr.length === 0) {
+    return output;
+  }
+
+  // access that specific days appointment array
+  const interviewersArr = dayArr[0].interviewers;
+
+  // iterate through appointment array and compare where it's id matches the id of states.appointments.
+
+  for (const x of interviewersArr) {
+    output.push(state.interviewers[x]);
+  }
+
+  return output;
+};
