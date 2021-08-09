@@ -9,8 +9,6 @@ const InterviewerListItem = function (props) {
     "interviewers__item--selected": props.selected,
   });
 
-  // console.log(props);
-  console.log('props.setInterviewer', props.id);
   return (
     <li
       className={interviewerClass}
