@@ -29,21 +29,22 @@ const Appointment = function (props) {
       student: name,
       interviewer
     };
-
-    transition(SAVING)
-
-    props.bookInterview(props.id, interview)
+  
+    transition(SAVING);
+  
+    props
+      .bookInterview(props.id, interview)
       .then(() => transition(SHOW))
-      .catch(() => transition(ERROR_SAVE))
-
+      .catch(error => transition(ERROR_SAVE, true));
   }
 
-  function deleting() {
-    transition(DELETING);
-    props.cancelInterview(props.id)
-      .then(transition(EMPTY))
-      .catch(() => transition(ERROR_DELETE))
-  }
+  function deleting(event) {
+    transition(DELETING, true);
+    props
+     .cancelInterview(props.id)
+     .then(() => transition(EMPTY))
+     .catch(error => transition(ERROR_DELETE, true));
+   }
 
   function confirmation() {
     transition(CONFIRM)
@@ -57,7 +58,7 @@ const Appointment = function (props) {
         <Show
           student={props.interview.student}
           interviewer={props.interview.interviewer}
-          onDelete={confirmation}
+          onDelete={() => transition(CONFIRM)}
           onEdit={() => transition(EDIT)}
         />
       )}
@@ -80,7 +81,7 @@ const Appointment = function (props) {
           onSave={save}
         />
       )}
-      {mode === ERROR_SAVE && <Error onClose={() => {back(); back();}} message="An error occured" />}
+      {mode === ERROR_SAVE && <Error onClose={back} message="An error occured" />}
       {mode === ERROR_DELETE && <Error onClose={() => transition(SHOW)} message="An error occured" />}
     </article>
   );
