@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
+
 import "components/InterviewerList.scss";
 
 import InterviewerListItem from "./InterviewerListItem";
@@ -25,6 +27,11 @@ const InterviewerList = function (props) {
       <ul className="interviewers__list">{interviewers}</ul>
     </section>
   );
+};
+
+// Uses PropTypes to validate props.interviewers type (array is required)
+InterviewerList.propTypes = {
+  interviewers: PropTypes.array.isRequired
 };
 
 export default InterviewerList;
