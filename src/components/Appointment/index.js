@@ -20,6 +20,10 @@ const Appointment = function (props) {
       student: name,
       interviewer
     };
+
+    props.bookInterview(1, interview);
+
+    transition(SHOW);
   }
 
   return (
