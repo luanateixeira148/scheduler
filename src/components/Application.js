@@ -15,8 +15,6 @@ export default function Application() {
     interviewers: {}
   })
 
-  // console.log("STATE:", state);
-
   const dailyAppointments = getAppointmentsForDay(state, state.day);
   const dailyInterviewers = getInterviewersForDay(state, state.day);
 

@@ -27,9 +27,7 @@ const Appointment = function (props) {
 
     props.bookInterview(props.id, interview)
       .then(() => transition(SHOW));
-
-    // console.log(props.interview.interviewer)
-    // transition(SHOW);
+      
   }
 
   return (
