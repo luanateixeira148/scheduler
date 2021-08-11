@@ -34,6 +34,7 @@ const Form = function (props) {
             onChange={(event) => {
               setName(event.target.value)
             }}
+            data-testid="student-name-input"
           />
         </form>
         <InterviewerList
