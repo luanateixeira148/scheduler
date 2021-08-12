@@ -1,23 +1,13 @@
 # Interview Scheduler
+Scheduler is a application that allows users to book and cancel interviews. It was created during my time at Lighthouse Labs, to practice building a full-stack application using React. 
 
-## Setup
+The Scheduler client application was created using Create React App. The Scheduler API server uses Express. Tests were conducted using Jest and Cypress.
 
-Install dependencies with `npm install`.
+## Final Product
 
-## Running Webpack Development Server
 
-```sh
-npm start
-```
-
-## Running Jest Test Framework
-
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
-```
+## Dependencies
+  * React
+  * Webpack, Babel
+  * Axios
+  * Storybook, Webpack Dev Server, Jest, Testing Library
