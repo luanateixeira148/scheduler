@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 import "components/InterviewerList.scss";
 
 import InterviewerListItem from "./InterviewerListItem";
 
 const InterviewerList = function (props) {
-
   // maps the new interviewers array with the info from the db
   const interviewers = props.interviewers.map((interviewer) => {
     // console.log('props.setInterviewer', props.setInterviewer)
@@ -31,7 +30,7 @@ const InterviewerList = function (props) {
 
 // Uses PropTypes to validate props.interviewers type (array is required)
 InterviewerList.propTypes = {
-  interviewers: PropTypes.array.isRequired
+  interviewers: PropTypes.array.isRequired,
 };
 
 export default InterviewerList;

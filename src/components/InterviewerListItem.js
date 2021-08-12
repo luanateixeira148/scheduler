@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames/bind";
 
 import "components/InterviewerListItem.scss";
 
 const InterviewerListItem = function (props) {
-
   const interviewerClass = classNames("interviewers__item", {
     "interviewers__item--selected": props.selected,
   });

@@ -47,10 +47,7 @@ const Appointment = function (props) {
   }
 
   return (
-    <article 
-      className="appointment" 
-      data-testid="appointment"
-    >
+    <article className="appointment" data-testid="appointment">
       <Header time={props.time} />
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
       {mode === SHOW && (
@@ -83,10 +80,16 @@ const Appointment = function (props) {
         />
       )}
       {mode === ERROR_SAVE && (
-        <Error onClose={back} message="There was an error saving your appointment" />
+        <Error
+          onClose={back}
+          message="There was an error saving your appointment"
+        />
       )}
       {mode === ERROR_DELETE && (
-        <Error onClose={() => transition(SHOW)} message="There was an error deleting your appointment" />
+        <Error
+          onClose={() => transition(SHOW)}
+          message="There was an error deleting your appointment"
+        />
       )}
     </article>
   );
