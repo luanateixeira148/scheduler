@@ -5,6 +5,12 @@ The Scheduler client application was created using Create React App. The Schedul
 
 ## Final Product
 
+!["Screenshot of Scheduler Overview"](https://github.com/luanateixeira148/scheduler/blob/master/docs/scheduler-UI.png?raw=true)
+
+
+!["Screenshot of Booking an appointment"](https://github.com/luanateixeira148/scheduler/blob/master/docs/scheduler-booking-an-appointment.png?raw=true)
+
+!["Screenshot of Deleting an appointment"](https://github.com/luanateixeira148/scheduler/blob/master/docs/scheduler-deleting-an-appointment.png?raw=true)
 
 ## Dependencies
   * React
