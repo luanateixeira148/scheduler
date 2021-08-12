@@ -83,10 +83,10 @@ const Appointment = function (props) {
         />
       )}
       {mode === ERROR_SAVE && (
-        <Error onClose={back} message="An error occured" />
+        <Error onClose={back} message="There was an error saving your appointment" />
       )}
       {mode === ERROR_DELETE && (
-        <Error onClose={() => transition(SHOW)} message="An error occured" />
+        <Error onClose={() => transition(SHOW)} message="There was an error deleting your appointment" />
       )}
     </article>
   );
